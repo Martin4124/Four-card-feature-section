@@ -19,3 +19,8 @@ $weight-bold: 600;
 /* Font-family */
 $fontfamily-primary: 'Poppins', sans-serif;
 
+/* Mixin */
+@mixin border-top($clr){
+    border-top: 5px $clr solid;
+}
+

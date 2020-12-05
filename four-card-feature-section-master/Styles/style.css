@@ -3,6 +3,7 @@
 /* Neutral */
 /* Font-Weight */
 /* Font-family */
+/* Mixin */
 header {
   max-width: 375px;
   width: 100%;
@@ -21,6 +22,83 @@ header p {
   padding: 1em;
 }
 
+@media only screen and (min-width: 800px) {
+  header {
+    max-width: 800px;
+  }
+  header h1 {
+    font-size: 40px;
+  }
+  header p {
+    font-size: 20px;
+  }
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 20px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+section {
+  width: 90%;
+  max-width: 375px;
+  background-color: white;
+  -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  padding: 20px 30px 30px;
+  border-radius: 10px;
+}
+
+section h2 {
+  color: #4c4e61;
+}
+
+section p {
+  color: #a3a5ae;
+  font-size: 13px;
+}
+
+section .img {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Supervisor {
+  border-top: 5px #45d3d3 solid;
+  grid-area: Supervisor;
+}
+
+.Team-Builder {
+  border-top: 5px #ea5353 solid;
+  grid-area: TeamBuilder;
+}
+
+.Karma {
+  border-top: 5px #fcaf4a solid;
+  grid-area: Karma;
+}
+
+.Calculator {
+  border-top: 5px #549ef2 solid;
+  grid-area: Calculator;
+}
+
 *,
 *::before,
 *::after {
@@ -33,7 +111,6 @@ header p {
 body {
   font-size: 15px;
   font-family: "Poppins", sans-serif;
-  color: #fafafa;
 }
 
 .center {
