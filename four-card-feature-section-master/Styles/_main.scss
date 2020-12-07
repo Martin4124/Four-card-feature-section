@@ -5,4 +5,21 @@ main{
     grid-row-gap: 20px;
     padding-bottom: 50px;
     padding-top: 50px;
+    grid-template-areas: 
+    "Supervisor"
+    "TeamBuilder"
+    "Karma"
+    "Calculator";
+    max-width: 1300px;
+    margin: 0 auto;
+}
+@media only screen and (min-width: 900px){
+    
+    main{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "Supervisor TeamBuilder Calculator"
+    " Supervisor Karma Calculator";
+    }
 }

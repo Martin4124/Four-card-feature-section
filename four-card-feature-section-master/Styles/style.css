@@ -44,6 +44,19 @@ main {
   grid-row-gap: 20px;
   padding-bottom: 50px;
   padding-top: 50px;
+      grid-template-areas: "Supervisor" "TeamBuilder" "Karma" "Calculator";
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 900px) {
+  main {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "Supervisor TeamBuilder Calculator" " Supervisor Karma Calculator";
+  }
 }
 
 section {
@@ -81,22 +94,47 @@ section .img {
 
 .Supervisor {
   border-top: 5px #45d3d3 solid;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: Supervisor;
+  max-height: 225px;
 }
 
 .Team-Builder {
   border-top: 5px #ea5353 solid;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: TeamBuilder;
+  max-height: 225px;
 }
 
 .Karma {
   border-top: 5px #fcaf4a solid;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: Karma;
+  max-height: 225px;
 }
 
 .Calculator {
   border-top: 5px #549ef2 solid;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: Calculator;
+  max-height: 225px;
+}
+
+@media only screen and (min-width: 900px) {
+  .Calculator {
+    max-height: 225px;
+    position: relative;
+    top: 115px;
+  }
+  .Supervisor {
+    max-height: 225px;
+    position: relative;
+    top: 115px;
+  }
 }
 
 *,

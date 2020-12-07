@@ -24,16 +24,36 @@ section{
 .Supervisor{
     @include border-top($clr-cyan);
     grid-area: Supervisor;
+    max-height: 225px;
 }
 .Team-Builder{
     @include border-top($clr-red);
     grid-area: TeamBuilder;
+    max-height: 225px;
 }
 .Karma{
     @include border-top($clr-orange);
     grid-area: Karma;
+    max-height: 225px;
 }
 .Calculator{
     @include border-top($clr-blue);
     grid-area: Calculator;
+    max-height: 225px;
+    
 }
+
+@media only screen and (min-width: 900px){
+    .Calculator{
+        max-height: 225px;
+        position: relative;
+        top: 115px;
+    }
+    .Supervisor{
+        max-height: 225px;
+        position: relative;
+        top: 115px;
+    }
+}
+
+
